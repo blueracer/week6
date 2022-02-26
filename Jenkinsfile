@@ -51,7 +51,7 @@ pipeline {
                     sh "docker push leszko/calculator:${BUILD_TIMESTAMP}"
                }
           }
-*/
+
           stage("Update version") {
                steps {
                     sh "sed  -i 's/{{VERSION}}/${BUILD_TIMESTAMP}/g' calculator.yaml"
@@ -86,5 +86,6 @@ pipeline {
                   sh "chmod +x smoke-test.sh && ./smoke-test.sh"
               }
           }
+*/
      }
 }
